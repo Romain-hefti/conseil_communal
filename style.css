@@ -1,0 +1,73 @@
+:root{
+  --bg: #ffffff;
+  --text: #0b1220;
+  --muted: #55606a;
+  --accent: #0069b4; /* customize to your preferred campaign color */
+  --accent-contrast: #ffffff;
+  --container: 1100px;
+  --radius: 8px;
+  --gap: 1.25rem;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color-scheme: light;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.45;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.container{
+  max-width:var(--container);
+  margin:0 auto;
+  padding:1.25rem;
+}
+
+.site-header{
+  border-bottom:1px solid #e6e9ee;
+  background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.4));
+  position:sticky; top:0; z-index:50;
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.brand{font-weight:700;text-decoration:none;color:var(--text);font-size:1.125rem}
+.main-nav a{margin-left:1rem;text-decoration:none;color:var(--muted)}
+.menu-toggle{display:none}
+
+.hero{
+  padding:2.25rem 0;
+  background:linear-gradient(90deg, rgba(0,105,180,0.05), transparent);
+}
+.hero-inner{display:flex;gap:2rem;align-items:center}
+.hero-text{flex:1}
+.hero h1{margin:0;font-size:2rem}
+.lead{color:var(--muted);margin-top:0.5rem}
+.hero-photo img{width:220px;height:220px;object-fit:cover;border-radius:12px;border:4px solid #fff;box-shadow:0 6px 20px rgba(7,10,25,0.06)}
+
+.section{padding:2rem 0}
+.section.alt{background:#fbfcfe}
+
+.priorities{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;list-style:none;padding:0;margin:0}
+.priorities li{background:white;padding:1rem;border-radius:8px;border:1px solid #eef1f6}
+.events-list{margin:0;padding-left:1rem}
+
+.form{max-width:640px}
+.form label{display:block;margin-top:0.75rem;font-size:0.9rem;color:var(--muted)}
+.form input,.form textarea{width:100%;padding:0.6rem;border:1px solid #dfe6ee;border-radius:6px;margin-top:0.4rem}
+.btn{display:inline-block;padding:0.6rem 1rem;border-radius:6px;text-decoration:none;border:0;cursor:pointer}
+.btn.primary{background:var(--accent);color:var(--accent-contrast)}
+.btn.ghost{background:transparent;border:1px solid var(--accent);color:var(--accent)}
+
+.site-footer{padding:1rem 0;border-top:1px solid #e6e9ee;color:var(--muted);font-size:0.9rem;text-align:center}
+
+/* Responsive */
+@media (max-width:880px){
+  .hero-inner{flex-direction:column;text-align:center}
+  .hero-photo img{width:160px;height:160px}
+  .main-nav{display:none}
+  .menu-toggle{display:inline-block}
+}
