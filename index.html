@@ -1,167 +1,40 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Romain Hefti — Local Council Candidate</title>
-  <meta name="description" content="Romain Hefti — Candidate for the local council. Learn about my priorities, events, and how to get involved." />
-  <meta property="og:title" content="Romain Hefti — Local Council Candidate" />
-  <meta property="og:description" content="Learn about my priorities, events, and how to get involved." />
-  <meta property="og:type" content="website" />
-  <link rel="icon" href="/favicon.ico" />
-  <link rel="stylesheet" href="styles.css" />
-  <style>
-    /* Temporary, page-specific styles — move to styles.css later if desired */
-    .site-header { background-color: #d7f5d8; }
-    .header-title { margin: 0; font-size: 1.25rem; }
-    .header-subtitle { margin: 0; font-size: 0.95rem; opacity: 0.95; }
-    .hero-flex { display: flex; gap: 1.5rem; align-items: flex-start; padding: 2rem 0; }
-    .hero-image { flex: 0 0 260px; }
-    .hero-image img { width: 100%; height: auto; display: block; border-radius: 6px; }
-    .hero-content h2 { margin: 0 0 0.5rem 0; }
-    .hero-content h3 { margin: 0 0 0.5rem 0; }
-    .placeholder { color: #666; }
-    @media (max-width: 700px) { .hero-flex { flex-direction: column; } .hero-image { flex: unset; } }
-  </style>
-</head>
-<body>
-  <header class="site-header" role="banner">
-    <div class="container header-inner">
-      <div class="header-main" style="display:flex;align-items:center;justify-content:space-between;padding:1rem 0;">
-        <div class="header-titles">
-          <h1 class="header-title">Elections Communales</h1>
-          <p class="header-subtitle">Lausanne, 8 Mars</p>
+<div class="container pb-0 mb-0" style="padding-bottom: 0px !important; margin-bottom: 0px !important;">
+    <h1 class="keditable text-center" data-aos="fade-up">Elections Communales Lausannoises - 8 Mars 2026</h1>
+
+    <div class="text-center my-4" data-aos="fade-up">
+        <div style="display: inline-block; background: #f8f9fa; padding: 20px 40px; border-radius: 10px; border: 1px solid #dee2e6;">
+            <div id="countdown-days-final" style="font-size: 5rem; font-weight: bold; color: #007bff; line-height: 1;">--</div>
+            <div style="font-size: 1.2rem; color: #6c757d; text-transform: uppercase; margin-top: 10px; font-weight: 600;">Jours restants</div>
         </div>
-
-        <nav class="main-nav" role="navigation" aria-label="Primary" id="main-nav">
-          <a href="#about">About</a>
-          <a href="#priorities">Priorities</a>
-          <a href="#events">Events</a>
-          <a href="#volunteer">Volunteer</a>
-          <a href="#contact">Contact</a>
-        </nav>
-
-        <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
-      </div>
     </div>
-  </header>
 
-  <main>
-    <section id="hero" class="hero" aria-label="Hero">
-      <div class="container hero-inner">
-        <div class="hero-flex">
-          <div class="hero-image" aria-hidden="true">
-            <!-- Replace /assets/profile.png with your profile image -->
-            <img src="/assets/profile.png" alt="Romain Hefti portrait" />
-          </div>
+    <script>
+        (function() {
+            function up() {
+                const target = new Date("March 8, 2026 00:00:00").getTime();
+                const now = new Date().getTime();
+                const diff = target - now;
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const el = document.getElementById("countdown-days-final");
+                if (el) { el.innerHTML = days > 0 ? days : 0; }
+            }
+            up(); window.addEventListener('load', up);
+        })();
+    </script>
+</div>
 
-          <div class="hero-content">
-            <h2>Romain Hefti</h2>
+<hr class="my-5">
 
-            <div class="intro">
-              <h3>Pourquoi m'elir au conseil communal?</h3>
-              <p class="placeholder">Placeholder text — to be filled in later.</p>
+<div class="container">
+    <div class="row align-items-center">
+        <div class="col-md-5 text-center" data-aos="fade-right">
+            <div class="kimgRatio1">
+                <img src="https://tr6jmmbyxqt.infomaniak.site/data/images/romain-hefti-profile.jpg" class="img-fluid rounded-circle shadow" style="max-width: 300px;">
             </div>
-
-            <p class="cta-row">
-              <a class="btn primary" href="#volunteer">Join the campaign</a>
-              <a class="btn ghost" href="#priorities">See priorities</a>
-            </p>
-          </div>
+            <h2 class="keditable mt-3">Romain Hefti</h2>
+            <p class="keditable text-muted">Candidat au Conseil Communal</p>
         </div>
-      </div>
-    </section>
-
-    <section id="about" class="section" aria-label="About">
-      <div class="container">
-        <h2>About</h2>
-        <p>Short bio: who you are, your background, and why you're running. Keep it concise and factual — consider linking to a longer CV or bio PDF.</p>
-      </div>
-    </section>
-
-    <section id="priorities" class="section alt" aria-label="Priorities">
-      <div class="container">
-        <h2>Priorities</h2>
-        <ul class="priorities">
-          <li>
-            <h3>Local services & infrastructure</h3>
-            <p>Concise bullet point about improving services or infrastructure.</p>
-          </li>
-          <li>
-            <h3>Transparency & participation</h3>
-            <p>How you'll encourage participation and transparency in council decisions.</p>
-          </li>
-          <li>
-            <h3>Environment & sustainability</h3>
-            <p>Local environmental priorities.</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="events" class="section" aria-label="Events">
-      <div class="container">
-        <h2>Upcoming events</h2>
-        <ul class="events-list">
-          <li><strong>Town hall:</strong> 2026-03-15 — Community centre — 19:00</li>
-          <li><strong>Meet & greet:</strong> 2026-04-02 — Market square — 11:00</li>
-        </ul>
-        <p>Link to calendar or downloadable ICS if needed.</p>
-      </div>
-    </section>
-
-    <section id="volunteer" class="section" aria-label="Volunteer">
-      <div class="container">
-        <h2>Volunteer or join the campaign</h2>
-        <p>We welcome volunteers. Tell us how you'd like to help.</p>
-
-        <form id="volunteer-form" class="form" method="POST" action="https://formspree.io/f/your-id">
-          <!-- Replace action with your form endpoint (Formspree, Netlify Forms, etc.) -->
-          <label for="v-name">Name</label>
-          <input id="v-name" name="name" required />
-
-          <label for="v-email">Email</label>
-          <input id="v-email" type="email" name="email" required />
-
-          <label for="v-availability">Availability / Message</label>
-          <textarea id="v-availability" name="message" rows="4"></textarea>
-
-          <button type="submit" class="btn primary">Sign up</button>
-        </form>
-
-      </div>
-    </section>
-
-    <section id="contact" class="section alt" aria-label="Contact">
-      <div class="container">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
-        <p>Phone: <a href="tel:+41XXXXXXXXX">+41 X XXX XX XX</a></p>
-
-        <h3>Message me</h3>
-        <form id="contact-form" class="form" method="POST" action="https://formspree.io/f/your-id">
-          <label for="c-name">Name</label>
-          <input id="c-name" name="name" required />
-
-          <label for="c-email">Email</label>
-          <input id="c-email" type="email" name="email" required />
-
-          <label for="c-message">Message</label>
-          <textarea id="c-message" name="message" rows="4" required></textarea>
-
-          <button type="submit" class="btn primary">Send message</button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer" role="contentinfo">
-    <div class="container">
-      <p>© <span id="year"></span> Romain Hefti — Local council candidacy.</p>
-      <p><a href="/privacy.html">Privacy</a> · <a href="/impressum.html">Impressum</a></p>
-    </div>
-  </footer>
-
-  <script src="script.js" defer></script>
-</body>
-</html>
+        <div class="col-md-7" data-aos="fade-left">
+            <h2 class="keditable">Elections Communales Lausanne 2026</h2>
+            <div class="keditable">
+                <p>Votez Romain Hefti au Conseil Communal
