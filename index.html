@@ -10,36 +10,64 @@
   <meta property="og:type" content="website" />
   <link rel="icon" href="/favicon.ico" />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Temporary, page-specific styles — move to styles.css later if desired */
+    .site-header { background-color: #d7f5d8; }
+    .header-title { margin: 0; font-size: 1.25rem; }
+    .header-subtitle { margin: 0; font-size: 0.95rem; opacity: 0.95; }
+    .hero-flex { display: flex; gap: 1.5rem; align-items: flex-start; padding: 2rem 0; }
+    .hero-image { flex: 0 0 260px; }
+    .hero-image img { width: 100%; height: auto; display: block; border-radius: 6px; }
+    .hero-content h2 { margin: 0 0 0.5rem 0; }
+    .hero-content h3 { margin: 0 0 0.5rem 0; }
+    .placeholder { color: #666; }
+    @media (max-width: 700px) { .hero-flex { flex-direction: column; } .hero-image { flex: unset; } }
+  </style>
 </head>
 <body>
   <header class="site-header" role="banner">
     <div class="container header-inner">
-      <a class="brand" href="#hero">Romain Hefti</a>
-      <nav class="main-nav" role="navigation" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#priorities">Priorities</a>
-        <a href="#events">Events</a>
-        <a href="#volunteer">Volunteer</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+      <div class="header-main" style="display:flex;align-items:center;justify-content:space-between;padding:1rem 0;">
+        <div class="header-titles">
+          <h1 class="header-title">Elections Communales</h1>
+          <p class="header-subtitle">Lausanne, 8 Mars</p>
+        </div>
+
+        <nav class="main-nav" role="navigation" aria-label="Primary" id="main-nav">
+          <a href="#about">About</a>
+          <a href="#priorities">Priorities</a>
+          <a href="#events">Events</a>
+          <a href="#volunteer">Volunteer</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+      </div>
     </div>
   </header>
 
   <main>
     <section id="hero" class="hero" aria-label="Hero">
       <div class="container hero-inner">
-        <div class="hero-text">
-          <h1>Romain Hefti</h1>
-          <p class="lead">Candidate for the local council — committed to pragmatic local solutions, transparency, and community participation.</p>
-          <p class="cta-row">
-            <a class="btn primary" href="#volunteer">Join the campaign</a>
-            <a class="btn ghost" href="#priorities">See priorities</a>
-          </p>
-        </div>
-        <div class="hero-photo" aria-hidden="true">
-          <!-- Replace with a real photo: /assets/me.jpg -->
-          <img src="/assets/placeholder-profile.jpg" alt="Romain Hefti portrait" />
+        <div class="hero-flex">
+          <div class="hero-image" aria-hidden="true">
+            <!-- Replace /assets/profile.png with your profile image -->
+            <img src="/assets/profile.png" alt="Romain Hefti portrait" />
+          </div>
+
+          <div class="hero-content">
+            <h2>Romain Hefti</h2>
+
+            <div class="intro">
+              <h3>Pourquoi m'elir au conseil communal?</h3>
+              <p class="placeholder">Placeholder text — to be filled in later.</p>
+            </div>
+
+            <p class="cta-row">
+              <a class="btn primary" href="#volunteer">Join the campaign</a>
+              <a class="btn ghost" href="#priorities">See priorities</a>
+            </p>
+          </div>
         </div>
       </div>
     </section>
